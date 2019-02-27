@@ -23,9 +23,9 @@ public class AdminCreateCompleteAction extends ActionSupport implements SessionA
 
 		AdminCreateCompleteDAO adminCreateCompleteDAO = new AdminCreateCompleteDAO();
 		adminCreateCompleteDAO.adminCreate(session.get("loginUserId").toString(),
-				                           session.get("loginPassword").toString(),
-				                           session.get("userName").toString(),
-				                           session.get("adminFlg").toString());
+				session.get("loginPassword").toString(),
+				session.get("userName").toString(),
+				session.get("adminFlg").toString());
 
 		String result = SUCCESS;
 		return result;

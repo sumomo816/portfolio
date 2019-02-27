@@ -36,5 +36,4 @@ public class UserListDeleteCompleteAction extends ActionSupport implements Sessi
 		this.session = session;
 	}
 
-
 }

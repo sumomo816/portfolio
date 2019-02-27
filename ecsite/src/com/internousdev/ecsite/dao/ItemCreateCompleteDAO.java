@@ -9,7 +9,6 @@ import com.internousdev.ecsite.util.DateUtil;
 
 public class ItemCreateCompleteDAO {
 
-
 	private DateUtil dateUtil =new DateUtil();
 
 	private String sql = "INSERT INTO item_info_transaction(item_name, item_price, item_stock, insert_date) VALUES(?,?,?,?)";

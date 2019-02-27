@@ -11,15 +11,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ItemListDeleteCompleteAction extends ActionSupport implements SessionAware{
 
 
-
 	public Map<String, Object> session;
 
 	private ItemListDeleteCompleteDAO dao = new ItemListDeleteCompleteDAO();
 
-
-
 	public String execute() throws SQLException{
-
 
 
 		int res = dao.itemInfoDelete();

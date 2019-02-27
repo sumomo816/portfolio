@@ -18,16 +18,16 @@ public class ItemListDeleteCompleteDAO {
 
 		int result = 0;
 
-	try{
-		PreparedStatement ps = con.prepareStatement(sql);
-		result = ps.executeUpdate();
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			result = ps.executeUpdate();
 
 
-	}catch(SQLException e){
-		e.printStackTrace();
-	}finally{
-		con.close();
-	}
-	return result;
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			con.close();
+		}
+		return result;
 	}
 }

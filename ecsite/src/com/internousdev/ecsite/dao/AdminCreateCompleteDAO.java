@@ -16,7 +16,6 @@ public class AdminCreateCompleteDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-
 		String sql = "INSERT INTO login_user_transaction(login_id, login_pass, user_name, admin_flg, insert_date) VALUES (?,?,?,?,?)";
 
 		try{
@@ -28,8 +27,6 @@ public class AdminCreateCompleteDAO {
 			ps.setString(5, dateUtil.getDate());
 
 			ps.execute();
-
-
 
 		}catch(SQLException e){
 			e.printStackTrace();

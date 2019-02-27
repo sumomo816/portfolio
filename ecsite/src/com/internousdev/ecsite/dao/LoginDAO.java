@@ -45,8 +45,8 @@ public class LoginDAO {
 
 	}
 
-		public LoginDTO getLoginDTO(){
-			return loginDTO;
-		}
+	public LoginDTO getLoginDTO(){
+		return loginDTO;
+	}
 
 }

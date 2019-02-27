@@ -8,7 +8,6 @@ import com.internousdev.ecsite.util.DBConnector;
 
 public class UserListDeleteCompleteDAO {
 
-
 	public int userInfoDelete() throws SQLException{
 
 		String sql = "DELETE FROM login_user_transaction";
@@ -21,7 +20,6 @@ public class UserListDeleteCompleteDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			result = ps.executeUpdate();
 
-
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
@@ -29,6 +27,5 @@ public class UserListDeleteCompleteDAO {
 		}
 		return result;
 	}
-
 
 }

@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.internousdev.ecsite.util.DBConnector;
 
-
 public class BuyItemDAO {
 
 	private DBConnector db = new DBConnector();

@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+C:\Users\internousdev\Desktop\workspace\workspace-imamura\portfolio\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+70584542.index
+1930456407.index
+3082098993.index
+1932839608.index
+2302771062.index
+1310826267.index

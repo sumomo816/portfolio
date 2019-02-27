@@ -12,7 +12,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ItemListAction extends ActionSupport implements SessionAware{
 
-
 	public Map<String, Object> session;
 	private ItemListDAO dao = new ItemListDAO();
 	private ArrayList<ItemInfoDTO> itemList = new ArrayList<ItemInfoDTO>();
@@ -21,10 +20,7 @@ public class ItemListAction extends ActionSupport implements SessionAware{
 
 		String result = SUCCESS;
 
-
 		itemList = dao.getItemList();
-
-
 
 		return result;
 	}

@@ -12,29 +12,23 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UserListAction extends ActionSupport implements SessionAware{
 
-
-    public Map<String, Object> session;
-    private ArrayList<UserListDTO> userList = new ArrayList<UserListDTO>();
+	public Map<String, Object> session;
+	private ArrayList<UserListDTO> userList = new ArrayList<UserListDTO>();
 
 	public String execute() throws SQLException{
 
-
 		UserListDAO userListDAO = new UserListDAO();
 
-
 		userList = userListDAO.getUserInfo();
-
 
 		String result = SUCCESS;
 		return result;
 	}
 
-
-
-@Override
-public void setSession(Map<String, Object> session){
-	this.session = session;
-}
+	@Override
+	public void setSession(Map<String, Object> session){
+		this.session = session;
+	}
 
 	public ArrayList<UserListDTO> getUserList(){
 		return userList;
