@@ -1,7 +1,5 @@
 package com.internousdev.ecsite.action;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -13,7 +11,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class HomeAction extends ActionSupport implements SessionAware{
 
 	public Map<String, Object> session;
-	private List<BuyItemDTO> buyItemList = new ArrayList<BuyItemDTO>();
 
 	public String execute(){
 		String result = "login";
@@ -22,11 +19,13 @@ public class HomeAction extends ActionSupport implements SessionAware{
 		if(session.containsKey("adminFlg")){
 			result = "input";
 		}else if(session.containsKey("id")){
-			BuyItemDTO buyItemDTO = new BuyItemDTO();
+
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
-			buyItemList = buyItemDAO.getBuyItemInfoList();
-			session.put("buyItemList", buyItemList);
+			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 			session.put("id", buyItemDTO.getId());
+			session.put("buyItem_name", buyItemDTO.getItemName());
+			session.put("buyItem_price", buyItemDTO.getItemPrice());
+
 
 			result = SUCCESS;
 		}
